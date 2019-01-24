@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
 
     private final static int NUM_ITEMS = 3;
 
-    public CustomPagerAdapter(FragmentManager fragmentManager) {
+    public CustomPagerAdapter(final FragmentManager fragmentManager) {
       super(fragmentManager);
     }
 
     @Override
-    public Fragment getItem(int position) {
+    public Fragment getItem(final int position) {
       switch (position) {
         case 0:
           return new WeatherForecastFragment();
@@ -40,13 +40,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
+    public CharSequence getPageTitle(final int position) {
       return "TAB " + position;
     }
   }
 
   @Override
-  protected void onCreate(Bundle savedInstanceState) {
+  protected void onCreate(final Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
