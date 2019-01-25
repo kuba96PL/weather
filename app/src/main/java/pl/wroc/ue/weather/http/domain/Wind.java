@@ -7,9 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 @EqualsAndHashCode
-public class WeatherDetails {
-  private final int id;
-  private final String weatherType;
-  private final String weatherDescription;
-  private final String icon;
+public class Wind {
+
+  private final double speed;
+  private final int direction;
 }
