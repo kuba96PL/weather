@@ -31,6 +31,8 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.5'
     compile group: 'joda-time', name: 'joda-time', version: '2.10'
     compile 'com.squareup.okhttp3:okhttp:3.12.1'
+    //noinspection GradleCompatible
+    compile 'com.google.android.gms:play-services-location:16.0.0'
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.11.1'
     androidTestCompile('com.android.support.test.espresso:espresso-core:3.0.2', {
