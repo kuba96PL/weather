@@ -5,9 +5,12 @@
   tools:context="pl.wroc.ue.weather.fragments.AirPollutionFragment">
 
   <!-- TODO: Update blank fragment layout -->
-  <TextView
+
+  <RelativeLayout
+    android:id="@+id/airPoluttionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Air Pollution"/>
+    android:background="@drawable/animated_clouds_background">
 
+  </RelativeLayout>
 </FrameLayout>

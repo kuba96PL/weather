@@ -5,9 +5,12 @@
   tools:context="pl.wroc.ue.weather.fragments.WeatherForecastFragment">
 
   <!-- TODO: Update blank fragment layout -->
-  <TextView
+
+  <RelativeLayout
+    android:id="@+id/weatherForecastLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:text="Weather Forecast"/>
+    android:background="@drawable/animated_clouds_background">
 
+  </RelativeLayout>
 </FrameLayout>

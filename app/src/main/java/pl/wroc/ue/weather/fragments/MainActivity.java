@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import pl.wroc.ue.weather.R;
+import pl.wroc.ue.weather.http.client.OpenWeatherMapClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -53,5 +54,8 @@ public class MainActivity extends AppCompatActivity {
     viewPager = findViewById(R.id.viewPager);
     viewPager.setAdapter(new CustomPagerAdapter(getSupportFragmentManager()));
     viewPager.setCurrentItem(1);
+
+    OpenWeatherMapClient client = new OpenWeatherMapClient();
+    client.fetchCurrentWeather();
   }
 }
