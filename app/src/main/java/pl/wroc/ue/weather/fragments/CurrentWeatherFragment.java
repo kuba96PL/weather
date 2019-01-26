@@ -16,7 +16,7 @@ import pl.wroc.ue.weather.R;
  */
 public class CurrentWeatherFragment extends Fragment {
 
-  private RelativeLayout layout;
+  private RelativeLayout currentWeatherLayout;
   private AnimationDrawable animationDrawable;
 
   public CurrentWeatherFragment() {
@@ -32,10 +32,10 @@ public class CurrentWeatherFragment extends Fragment {
   }
 
   @Override
-  public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+  public void onViewCreated(final View view, @Nullable final Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    layout = getView().findViewById(R.id.relativeLayout);
-    animationDrawable = (AnimationDrawable) layout.getBackground();
+    currentWeatherLayout = getView().findViewById(R.id.currentWeatherLayout);
+    animationDrawable = (AnimationDrawable) currentWeatherLayout.getBackground();
   }
 
   @Override
