@@ -32,12 +32,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
   private static final int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
   private ViewPager viewPager;
 
-  private Location location;
   private GoogleApiClient googleApiClient;
 
   private LocationRequest locationRequest;
-  private long UPDATE_INTERVAL = 1000;
-  private long FASTEST_INTERVAL = 1000;
+  private long UPDATE_INTERVAL = 5000;
+  private long FASTEST_INTERVAL = 5000;
 
 
   public static class CustomPagerAdapter extends FragmentPagerAdapter {
@@ -117,7 +116,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
         != PackageManager.PERMISSION_GRANTED) {
       requestPermissions(new String[]{ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION}, 0);
     }
-    location = LocationServices.FusedLocationApi.getLastLocation(googleApiClient);
 
     startLocationUpdates();
   }
@@ -137,6 +135,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.C
     if (location == null) {
       Log.i("ERROR", "Error while trying to get user location");
     } else {
+      location = location;
       Toast.makeText(this, "Location: " + String.valueOf(location.getLongitude()) + " " + String.valueOf(location.getLatitude()), Toast.LENGTH_LONG).show();
     }
   }
